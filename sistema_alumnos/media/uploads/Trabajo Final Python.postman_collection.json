@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "6c20abf0-63c9-4081-b213-cad273ca9594",
+		"name": "Trabajo Final Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28052219"
+	},
+	"item": [
+		{
+			"name": "cargar_alumnos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_file",
+							"type": "file",
+							"src": "/C:/Users/pameh/OneDrive/Desktop/Intro_Python/trabajo_final/sistema_alumnos/media/uploads/alumnos.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/cargarAlumnos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"cargarAlumnos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar_alumnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/listarAlumnos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"listarAlumnos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_alumno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/alumno/12074972/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"alumno",
+						"12074972",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar_alumnos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"John\",\r\n    \"apellido\": \"McClane\",\r\n    \"telefono\": 1181044079,\r\n    \"correo_electronico\": \"yipeekiyay@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/modificarAlumno/95601465/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"modificarAlumno",
+						"95601465",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar_alumno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/eliminarAlumno/43193332/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"eliminarAlumno",
+						"43193332",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alumnos_por_curso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/alumnosPorCurso/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"alumnosPorCurso",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "asignar_curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/gestion_alumnos/asignarCurso/44695326/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"gestion_alumnos",
+						"asignarCurso",
+						"44695326",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
